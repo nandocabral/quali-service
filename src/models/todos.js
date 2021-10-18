@@ -9,7 +9,7 @@ module.exports = (sequelize, { INTEGER, STRING, BOOLEAN }) => {
       type: STRING,
       allowNull: false,
     },
-    title: {
+    description: {
       type: STRING,
       allowNull: true,
     },

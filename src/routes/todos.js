@@ -1,11 +1,13 @@
 const { Router } = require('express')
 const router = Router();
 
-const { getTodos } = require('../controllers/todos.js');
+const { getTodos, getTodo, addTodo, deleteTodo, updateTodo, updateCompleteTodo } = require('../controllers/todos.js');
 // /api/todos
 router.get('/', getTodos);
-// router.post('/', crearEvento);
-// router.delete('/:id', eliminarEvento);
-// router.put('/:id', actualizarEvento);
+router.get('/:id', getTodo);
+router.post('/', addTodo);
+router.delete('/:id', deleteTodo);
+router.put('/:id', updateTodo);
+router.patch('/:id', updateCompleteTodo);
 
 module.exports = { router };

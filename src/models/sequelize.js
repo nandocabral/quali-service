@@ -1,10 +1,6 @@
 const Sequelize = require('sequelize');
 const TodoModel = require('./todos')
 
-// const sequelize = new Sequelize('quali', 'root', 'root', {
-//   host: 'localhost',
-//   dialect: 'mysql'
-// });
 const sequelize = new Sequelize('postgres://root:root@127.0.0.1:5432/postgres');
 
 // async function test () {
